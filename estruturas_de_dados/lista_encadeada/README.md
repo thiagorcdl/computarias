@@ -34,7 +34,13 @@ minha_lista.primeiro.valor == "XYZ"
 minha_lista.primeiro.proximo.valor == "ABC"
 ```
 
-### Observações
+## Código
+
+Veja a implementação em Python aqui:
+
+* [lista_encadeada.py](lista_encadeada.py)
+
+## Observações
 
 * A lista encadeada mais simples é também conhecida como "lista _unicamente_ encadeada", apenas uma referência, que é para o próximo elemento da lista; não para o anterior. Logo, **a lista só pode ser percorrida em uma única direção**.
 * É possível ter elementos referenciando tanto o próximo nodo quanto o nodo anterior, permitindo a lsita ser percorrida em ambas as direçoes. Nesse caso, é uma lista _duplamente_ encadeada.

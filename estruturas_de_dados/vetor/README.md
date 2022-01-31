@@ -38,7 +38,13 @@ ultimo_indice = meu_vetor.comprimento - 1
 É importante manter isso em mente na hora de percorrer todos as posições de um vetor
 para evitar erros.
 
-### Observações
+## Código
+
+Veja a implementação em Python aqui:
+
+* [vetor.py](vetor.py)
+
+## Observações
 
 * Estou usando o termo "comprimento" em vez de "tamanho" para evitar confusão com o 
 espaço que a estrutura pode ocupar em memória, mas no dia a dia ambas as palavras são
@@ -48,4 +54,4 @@ válidas para se referir a quantos ítens existem/cabem em um vetor.
 `N * X`. 
 
 * Um vetor que possui vetores é copnsiderado um vetor de duas (ou mais) dimensões. 
-Nesse caso, é também conhecido como uma _Matriz_.
+Nesse caso, é também conhecido como uma _Matriz_ (🇺🇸 Matrix).
