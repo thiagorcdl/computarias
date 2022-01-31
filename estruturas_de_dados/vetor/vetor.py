@@ -13,7 +13,7 @@ class Vetor:
     """
 
     def __init__(self, comprimento):
-        """Constrói um meu_vetor "vazio" com o tamanho desejado.
+        """Constrói um vetor "vazio" com o tamanho desejado.
 
         Posições "vazias" são representadas com `None`.
         """
