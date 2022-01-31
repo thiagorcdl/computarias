@@ -2,7 +2,7 @@
 
 > 🇺🇸 _Array_
 
-Um vetor é uma lista de valores unidimensional, geralmente com um comprimento 
+O vetor é uma lista de valores unidimensional, comumente possuindo um comprimento 
 pré-definido. 
 
 O comprimento de um vetor refere-se à quantidade de posições que ele possui para
@@ -47,3 +47,5 @@ válidas para se referir a quantos ítens existem/cabem em um vetor.
 * A implementação específica e o real espaço utilizado em bits dependerão da linguagem e como cada tipo é tratado, mas de maneira geral, se uma variável ocupa `X` de espaço em memória, então um vetor de comprimento `N` ocupará
 `N * X`. 
 
+* Um vetor que possui vetores é copnsiderado um vetor de duas (ou mais) dimensões. 
+Nesse caso, é também conhecido como uma _Matriz_.

@@ -1,4 +1,4 @@
-"""Implementação de um meu_vetor em Python."""
+"""Implementação de Vetor em Python."""
 
 
 class Vetor:
@@ -22,7 +22,7 @@ class Vetor:
 
     @property
     def comprimento(self) -> int:
-        """Retorna o comprimento do meu_vetor, de forma que só possa ser lido.
+        """Retorna o comprimento do vetor, de forma que só possa ser lido.
 
         Utilização:
             meu_vetor = Vetor(1, 2, 3)
