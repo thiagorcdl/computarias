@@ -15,3 +15,12 @@ Linguagens de programação possuem diferentes tipos de dados e, por vezes, até
 estruturas de dados um pouco mais complexas já disponíveis para uso. 
 No Python, o tipo `list` (lista) é uma implementação da estrutura de dados _Array_ 
 (vetor), mas isso não tira a importância de entender o seu conceito.
+
+## Conteúdo
+
+Aqui estão as estruturas presentes até o momento, em ordem sugerida de aprendizado:
+
+1. [Vetor](/estruturas_de_dados/vetor/README.md)
+1. [Lista Encadeada](/estruturas_de_dados/lista_encadeada/README.md)
+1. [Fila](/estruturas_de_dados/fila/README.md)
+1. [Pilha](/estruturas_de_dados/pilha/README.md)
