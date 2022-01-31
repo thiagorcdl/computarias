@@ -28,17 +28,11 @@ class Fila:
     def __init__(self):
         """Constrói uma fila vazia."""
         self._primeiro = None
-        self._comprimento = 0
 
     @property
     def primeiro(self) -> Nodo:
         """Retorna o nodo inicial da fila, de forma que só possa ser lido."""
         return self._primeiro
-
-    @property
-    def comprimento(self) -> int:
-        """Retorna o comprimento da fila, de forma que só possa ser lido."""
-        return self._comprimento
 
     def adicionar(self, valor) -> Nodo:
         """Inclui um nodo no final da fila com o valor indicado.
@@ -56,7 +50,6 @@ class Fila:
 
             nodo_existente.proximo = novo_nodo
 
-        self._comprimento += 1
         return novo_nodo
 
     def consumir(self) -> Nodo:
@@ -64,7 +57,20 @@ class Fila:
         nodo_removido = self._primeiro
         if self._primeiro is not None:
             self._primeiro = nodo_removido.proximo
-            self._comprimento -= 1
 
         return nodo_removido
 
+    def imprimir(self):
+        """Imprime todos os nodos da fila."""
+        texto = "<<< "
+        nodo = self._primeiro
+        while nodo:
+            texto += f"{nodo}, "
+            nodo = nodo.proximo
+        texto += "<<<"
+        return texto
+
+    def __repr__(self) -> str:
+        """Representa a estrutura de uma maneira amigável para imprimir no terminal."""
+        conteudo = f"Primeiro: {self._primeiro} " if self._primeiro else "VAZIA"
+        return f"[{self.__class__.__name__} | {conteudo}]"

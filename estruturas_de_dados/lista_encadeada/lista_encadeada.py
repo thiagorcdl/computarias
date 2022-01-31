@@ -103,11 +103,16 @@ class ListaEncadeada:
 
         return nodo_removido
 
-    def __repr__(self) -> str:
-        """Representa a estrutura de uma maneira amigável para imprimir no terminal."""
+    def imprimir(self):
+        """Imprime todos os nodos da lista."""
         texto = ""
         nodo = self._primeiro
         while nodo:
-            texto += f"{nodo}--"
+            texto += f"{nodo}-- "
             nodo = nodo.proximo
         return texto
+
+    def __repr__(self) -> str:
+        """Representa a estrutura de uma maneira amigável para imprimir no terminal."""
+        conteudo = f"Primeiro: {self._primeiro} " if self._primeiro else "VAZIA"
+        return f"[{self.__class__.__name__} | {conteudo}]"
