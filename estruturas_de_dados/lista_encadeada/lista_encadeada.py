@@ -73,8 +73,8 @@ class ListaEncadeada:
         nodo_removido = self._primeiro
         if self._primeiro is not None:
             self._primeiro = nodo_removido.proximo
+            self._comprimento -= 1
 
-        self._comprimento -= 1
         return nodo_removido
 
     def remover_ultimo(self) -> Nodo:
