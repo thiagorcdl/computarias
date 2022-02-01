@@ -2,9 +2,7 @@
 
 
 class Nodo:
-    """Elemento de uma fila, guardando um valor e referenciando outro
-    Nodo.
-    """
+    """Elemento de uma fila, guardando um valor e referenciando outro Nodo."""
 
     def __init__(self, valor):
         """Constrói um nodo com o valor indicado.
@@ -28,6 +26,11 @@ class Fila:
     def __init__(self):
         """Constrói uma fila vazia."""
         self._primeiro = None
+
+    def __repr__(self) -> str:
+        """Representa a estrutura de uma maneira amigável para imprimir no terminal."""
+        conteudo = f"Primeiro: {self._primeiro} " if self._primeiro else "VAZIA"
+        return f"[{self.__class__.__name__} | {conteudo}]"
 
     @property
     def primeiro(self) -> Nodo:
@@ -69,8 +72,3 @@ class Fila:
             nodo = nodo.proximo
         texto += "<<<"
         return texto
-
-    def __repr__(self) -> str:
-        """Representa a estrutura de uma maneira amigável para imprimir no terminal."""
-        conteudo = f"Primeiro: {self._primeiro} " if self._primeiro else "VAZIA"
-        return f"[{self.__class__.__name__} | {conteudo}]"

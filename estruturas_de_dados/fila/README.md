@@ -4,7 +4,7 @@
 
 A fila pode ser interpretada como uma versão da [lista encadeada](/estruturas_de_dados/lista_encadeada/), mas com uma particularidade na sua manipulação: o primeiro elemento a ser inserido será o primeiro a ser removido. Este comportamento é chamado de _FIFO_, sigla para _First-In First-Out_ (🇧🇷 _Primeiro a Entrar, Primeiro a Sair_).
 
-Ela dispensa muita explicação por funcionar exatamente como uma fila comum na vida real. Os elementos são posicionados um atrás do outro; quem chega depois vai pro final da fila; quem está no ínicio da fila será o próximo a ser atendido.
+Ela dispensa muita explicação por funcionar exatamente como uma fila comum na vida real. Os elementos são posicionados um atrás do outro; quem chega depois vai pro fi``nal da fila; quem está no ínicio da fila será o próximo a ser atendido.
 
 ```python
 minha_fila = Fila()

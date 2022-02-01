@@ -23,6 +23,10 @@ minha_pilha.consumir() # M Charizard EX
 minha_pilha.consumir() # Dark Magician
 ```
 
+Em termos de aplicação real, pilhas são extremamente úteis quando se quer colocar algo temporariamente em memória e muito utilizadas por compiladores e interpretadores. Toda vez que uma função é chamada, um novo escopo de execução é criado, com referências à função e parâmetros sendo empilhados na memória, mantendo um isolamento com o escopo anterior (que chamou a função). Quando esta acaba sua execução, tudo o que estava em seu escopo é desempilhado e basicamente perdido; por isso você não consegue acessar a variável de uma função A dentro de outra função B. No máximo, em alguns casos pode-se acessar uma variável de um escopo anterior que ainda esteja na pilha (ex: variáveis globais).
+
+Também existem diversos algoritmos que utilizam essa estrutura, como a _Busca em Profundidade_ que é um dos mais importantes a se aprender. A pilha, nesse caso, mantém um histórico do trajeto a se percorrer para encontrar o nodo desejado em uma Árvore. Isso mesmo, a pilha é uma estrutura de dados que auxilia no algoritmo de outra estrutura de dados.
+
 ## Código
 
 Veja a implementação em Python aqui:
