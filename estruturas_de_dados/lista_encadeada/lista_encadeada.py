@@ -68,6 +68,32 @@ class ListaEncadeada:
 
         return novo_nodo
 
+    def adicionar_posicao(self, posicao_alvo, valor) -> Nodo:
+        """Inclui um nodo na posição indicada."""
+        if posicao_alvo == 0:
+            # Adiciona o primeiro
+            return self.adicionar_primeiro(valor)
+
+        if not self.primeiro:
+            # Lista vazia
+            return None
+
+        posicao_atual = 1
+        nodo_anterior = self.primeiro
+        while posicao_atual < posicao_alvo:
+            nodo_anterior = nodo_anterior.proximo
+            if nodo_anterior is None:
+                # Será impossível chegar na posição desejada.
+                return None
+            posicao_atual += 1
+
+        # Faz o nodo anterior apontar pro novo, e o novo para o sucessor
+        novo_nodo = Nodo(valor)
+        nodo_sucessor = nodo_anterior.proximo
+        nodo_anterior.proximo = novo_nodo
+        novo_nodo.proximo = nodo_sucessor
+        return novo_nodo
+
     def remover_primeiro(self) -> Nodo:
         """Retira o primeiro nodo da lista e promove o próximo."""
         nodo_removido = self._primeiro
@@ -101,6 +127,34 @@ class ListaEncadeada:
             penultimo_nodo.proximo = None
             self._comprimento -= 1
 
+        return nodo_removido
+
+    def remover_posicao(self, posicao_alvo) -> Nodo:
+        """Retira o nodo que está na posição indicada.
+
+        O primeiro está na posição zero.
+        """
+        if not self.primeiro:
+            # Lista vazia
+            return None
+
+        if posicao_alvo == 0:
+            # Remove o primeiro
+            return self.remover_primeiro()
+
+        posicao_atual = 1
+        nodo_anterior = self.primeiro
+        while posicao_atual < posicao_alvo:
+            nodo_anterior = nodo_anterior.proximo
+            if nodo_anterior is None:
+                # Será impossível chegar na posição desejada.
+                return None
+            posicao_atual += 1
+
+        # Faz o nodo anterior apontar pro sucessor do que está sendo removido
+        nodo_removido = nodo_anterior.proximo
+        nodo_sucessor = nodo_removido.proximo
+        nodo_anterior.proximo = nodo_sucessor
         return nodo_removido
 
     def imprimir(self):
