@@ -24,11 +24,11 @@ Quando se insere no final, o atual último nodo simplesmente receberá a referê
 # Inicia a lista vazia
 minha_lista = ListaEncadeada()
 
-# Cria primeiro nodo valor "ABC"
+# Cria primeiro nodo, valor "ABC"
 minha_lista.adicionar_primeiro("ABC")
 minha_lista.primeiro.valor == "ABC"
 
-# Insere novo nodo de valor "XYZ"
+# Insere novo nodo na primeira posição, valor "XYZ"
 minha_lista.adicionar_primeiro("XYZ")
 minha_lista.primeiro.valor == "XYZ"
 minha_lista.primeiro.proximo.valor == "ABC"
@@ -43,5 +43,5 @@ Veja a implementação em Python aqui:
 ## Observações
 
 * A lista encadeada mais simples é também conhecida como "lista _unicamente_ encadeada", apenas uma referência, que é para o próximo elemento da lista; não para o anterior. Logo, **a lista só pode ser percorrida em uma única direção**.
-* É possível ter elementos referenciando tanto o próximo nodo quanto o nodo anterior, permitindo a lsita ser percorrida em ambas as direçoes. Nesse caso, é uma lista _duplamente_ encadeada.
-* Também é possível guardar uma referência direto para o último nodo da lista (assi mcomo há para o primeiro), facilitando a inclusão de novos nodos no final.
+* Alternativamente, é possível ter elementos referenciando tanto o próximo nodo quanto o nodo anterior, permitindo a lista ser percorrida em ambas as direções. Nesse caso, é uma "lista _duplamente_ encadeada".
+* Também é possível guardar uma referência direto para o último nodo da lista (assim como há para o primeiro), facilitando a inclusão de novos nodos no final.
